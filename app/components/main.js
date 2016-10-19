@@ -6,12 +6,14 @@ import { fetchFeeds } from '../actions/FeedAction'
 import SearchFeeds from './SearchFeeds'
 import FeedsList from './FeedsList'
 
+import '../../stylesheets/modules/main.css'
+
 
 class Main extends React.Component {
   render() {
     console.log(this.props, "from main")
     return (
-      <div>
+      <div className='main'>
         <SearchFeeds fetchFeeds={this.props.fetchFeeds} />
         <FeedsList feeds={this.props.feeds.data} />
       </div>

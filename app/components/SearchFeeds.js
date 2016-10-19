@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../../stylesheets/modules/searchfeeds.css'
+
 export default class SearchFeeds extends React.Component {
   constructor(props) {
     super(props)
@@ -18,7 +20,7 @@ export default class SearchFeeds extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='search'>
         <p>Enter the url to the feeds you want.</p>
           <input type='text' onChange={this.onInputChange} value={this.state.url} placeholder='https://github.com/betty.atom'/>
           <button onClick={this.fetchFeeds}>Search</button>
