@@ -12,7 +12,6 @@ import '../../stylesheets/modules/main.css'
 
 class Main extends React.Component {
   render() {
-    console.log(this.props, "from main")
     return (
       <div className='main'>
         <Header />

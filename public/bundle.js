@@ -23294,7 +23294,6 @@
 	  _createClass(Main, [{
 	    key: 'render',
 	    value: function render() {
-	      console.log(this.props, "from main");
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'main' },
