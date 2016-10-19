@@ -1,0 +1,19 @@
+.feeds {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.feed-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #eee;
+  margin-bottom: 5px;
+}
+
+.bold {
+  font-weight: 600;
+}
