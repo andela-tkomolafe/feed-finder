@@ -3,6 +3,7 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { fetchFeeds } from '../actions/FeedAction'
+import Header from './Header'
 import SearchFeeds from './SearchFeeds'
 import FeedsList from './FeedsList'
 
@@ -14,8 +15,9 @@ class Main extends React.Component {
     console.log(this.props, "from main")
     return (
       <div className='main'>
+        <Header />
         <SearchFeeds fetchFeeds={this.props.fetchFeeds} />
-        <FeedsList feeds={this.props.feeds.data} />
+        {Object.keys(this.props.feeds).length > 0 ? <FeedsList feeds={this.props.feeds.data} /> : null}
       </div>
     )
   }
