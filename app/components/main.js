@@ -1,12 +1,37 @@
-import React from 'react';
+import React from 'react'
 
-export default class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.displayName = 'Feed-finder';
-  }
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { fetchFeeds } from '../actions/FeedAction'
+import SearchFeeds from './SearchFeeds'
+import FeedsList from './FeedsList'
+
+
+class Main extends React.Component {
   render() {
-    return <div>This is main</div>;
+    console.log(this.props, "from main")
+    return (
+      <div>
+        <SearchFeeds fetchFeeds={this.props.fetchFeeds} />
+        <FeedsList feeds={this.props.feeds.data} />
+      </div>
+    )
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    feeds: state
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchFeeds: bindActionCreators(fetchFeeds, dispatch)
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Main)
