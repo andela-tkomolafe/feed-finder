@@ -23353,7 +23353,7 @@
 	        }).fail(function () {
 	            dispatch({
 	                type: 'GOT_FEEDS_FAIL',
-	                data: 'Unable to load feed, Incorrect path or invalid feed'
+	                data: 'Unable to load feed, check the feed url entered'
 	            });
 	        });
 	    };
@@ -33706,7 +33706,7 @@
 	        this.props.feeds ? _react2.default.createElement(List, { feeds: this.props.feeds.feed }) : _react2.default.createElement(
 	          'p',
 	          null,
-	          'Unable to load feed, Incorrect path or invalid feed.'
+	          'Unable to load feed, check the feed url entered.'
 	        )
 	      );
 	    }
