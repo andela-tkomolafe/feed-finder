@@ -33647,7 +33647,7 @@
 	          null,
 	          'Enter the url to the feeds you want.'
 	        ),
-	        _react2.default.createElement('input', { type: 'text', onChange: this.onInputChange, value: this.state.url, placeholder: 'https://github.com/betty.atom' }),
+	        _react2.default.createElement('input', { type: 'text', onChange: this.onInputChange, value: this.state.url, placeholder: 'e.g https://github.com/betty.atom' }),
 	        _react2.default.createElement(
 	          'button',
 	          { onClick: this.fetchFeeds },
