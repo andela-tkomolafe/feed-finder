@@ -22,7 +22,7 @@ export default class SearchFeeds extends React.Component {
     return (
       <div className='search'>
         <p>Enter the url to the feeds you want.</p>
-          <input type='text' onChange={this.onInputChange} value={this.state.url} placeholder='https://github.com/betty.atom'/>
+          <input type='text' onChange={this.onInputChange} value={this.state.url} placeholder='e.g https://github.com/betty.atom'/>
           <button onClick={this.fetchFeeds}>Search</button>
       </div>
     )
