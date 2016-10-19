@@ -1,4 +1,18 @@
 .search {
   margin: 50px auto;
-  width: 70%;
+  width: 600px;
+}
+
+.search p {
+  font-size: 28px;
+}
+.search input {
+  width: 500px;
+  margin-right: 10px;
+}
+
+.search button, .search input {
+  height: 50px;
+  font-size: 17px;
+  padding: 13px;
 }
